@@ -1,41 +1,140 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  /* background-color: #f2f2f2; */
+}
+
+.container {
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */
   padding: 2rem;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar li {
+  margin-left: 5rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.navbar a:hover {
+  color: #646cff;
+}
+
+/* BooksPage styles */
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.book-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.book-image {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.book-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* BookDetailsPage styles */
+.details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
-.card {
-  padding: 2em;
+.details-image {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  float: left;
+  margin-right: 20px;
 }
 
-.read-the-docs {
-  color: #888;
+.details-content {
+  flex: 1;
+}
+
+
+.book.book.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.details p {
+  font-size: 20px;
+  margin-right: 440px;
+}
+
+.book-description {
+  margin-top: 1rem;
+  font-style: italic;
+  font-size: larger;
+}
+
+/* QuotesPage styles */
+.quotes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.quote-card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.quote-text {
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.quote-author {
+  font-size: 14px;
+  font-style: italic;
+  color: #666;
 }
